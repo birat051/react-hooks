@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import styles from '../styles/counter.module.css'
+import styles from '../../styles/counter.module.css'
 
 function CounterComponent() {
   const [counter, setcounter] = useState(0)
@@ -20,6 +20,7 @@ function CounterComponent() {
   }
   return (
     <div className={styles.countercontainer}>
+        <h1>useMemo example</h1>
         <button onClick={addCounter}>Add counter</button>
         <p>Counter value is {checkData}</p>
         {!clicked && <button onClick={clickMe}>Click me</button>}

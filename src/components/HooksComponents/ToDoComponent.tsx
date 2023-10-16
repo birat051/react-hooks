@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 import ToDoChildComponent from './ToDoChildComponent'
-import styles from '../styles/todo.module.css'
+import styles from '../../styles/todo.module.css'
 
 function ToDoComponent() {
   const [todo, settodo] = useState<string[]>([])
@@ -16,7 +16,7 @@ function ToDoComponent() {
   }
   return (
     <div className={styles.todocontainer}>
-      <h1>ToDO List</h1>
+      <h1>ToDO List- useCallback Example</h1>
       <ToDoChildComponent todo={todo} addTodo={addToDO}/>
       {!clicked && <button onClick={clickMe}>Click me</button>}
       {clicked && <button onClick={clickMe}>I have been clicked!</button>}

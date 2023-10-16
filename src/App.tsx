@@ -1,15 +1,21 @@
-import { useState } from 'react'
 import './App.css'
-import CounterComponent from './components/CounterComponent'
-import ToDoComponent from './components/ToDoComponent'
+import EnhancedClickCounter from './components/DesignPatternComponents/ClickCounterHOC'
+import ClickCounterRender from './components/DesignPatternComponents/ClickCounterRender'
+import ClickHoverRender from './components/DesignPatternComponents/ClickHoverRender'
+import EnhancedHoverCounter from './components/DesignPatternComponents/HoverCounterHOC'
+import RenderPropParent from './components/DesignPatternComponents/RenderPropParent'
+import CounterComponent from './components/HooksComponents/CounterComponent'
+import ToDoComponent from './components/HooksComponents/ToDoComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className='app'>
     <CounterComponent />
     <ToDoComponent />
+    <EnhancedClickCounter />
+    <EnhancedHoverCounter />
+    <RenderPropParent render={(count,incrementCounter)=><ClickCounterRender count={count} incrementCounter={incrementCounter}/>}/>
+    <RenderPropParent render={(count,incrementCounter)=><ClickHoverRender count={count} incrementCounter={incrementCounter}/>}/>
     </div>
   )
 }

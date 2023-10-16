@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styles from '../styles/todo.module.css'
+import styles from '../../styles/todo.module.css'
 import { memo } from "react"
 
 type ToDoChildProp=
