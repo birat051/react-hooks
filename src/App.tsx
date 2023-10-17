@@ -5,6 +5,7 @@ import ClickHoverRender from './components/DesignPatternComponents/ClickHoverRen
 import EnhancedHoverCounter from './components/DesignPatternComponents/HoverCounterHOC'
 import RenderPropParent from './components/DesignPatternComponents/RenderPropParent'
 import CounterComponent from './components/HooksComponents/CounterComponent'
+import CustomHooksCounter from './components/HooksComponents/CustomHooksCounter'
 import ToDoComponent from './components/HooksComponents/ToDoComponent'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <EnhancedHoverCounter />
     <RenderPropParent render={(count,incrementCounter)=><ClickCounterRender count={count} incrementCounter={incrementCounter}/>}/>
     <RenderPropParent render={(count,incrementCounter)=><ClickHoverRender count={count} incrementCounter={incrementCounter}/>}/>
+    <CustomHooksCounter />
     </div>
   )
 }
