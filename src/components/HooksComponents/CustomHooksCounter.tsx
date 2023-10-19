@@ -2,7 +2,7 @@ import useMultiplyCount from './MutiplyHooks'
 import styles from '../../styles/counter.module.css'
 
 function CustomHooksCounter() {
-  const [count,multiplyCount] = useMultiplyCount(0)
+  const [count,multiplyCount] = useMultiplyCount(1)
   return (
     <div className={styles.countercontainer}>
       <h1>Using Custom Hooks</h1>
